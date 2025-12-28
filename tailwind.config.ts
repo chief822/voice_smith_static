@@ -66,6 +66,22 @@ export default {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
         },
+        'progress-shimmer': {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'slide-down': {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(100%)', opacity: '0' },
+        },
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -73,10 +89,15 @@ export default {
         'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'waveform': 'waveform 1s ease-in-out infinite',
         'shimmer': 'shimmer 3s linear infinite',
+        'progress-shimmer': 'progress-shimmer 2s linear infinite',
+        'slide-up': 'slide-up 0.3s ease-out',
+        'slide-down': 'slide-down 0.3s ease-in',
+        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
       },
     },
   },

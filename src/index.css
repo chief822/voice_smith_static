@@ -89,4 +89,16 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
   }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-lg shadow-lg;
+  }
+
+  .gradient-purple {
+    @apply bg-gradient-to-r from-purple-600 via-violet-600 to-purple-700;
+  }
+
+  .gradient-purple-radial {
+    @apply bg-gradient-radial from-purple-500/20 via-transparent to-transparent;
+  }
 }

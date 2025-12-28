@@ -6,6 +6,7 @@ import { ProcessingStatus } from '../components/features/ProcessingStatus';
 import { Header } from '../components/layout/Header';
 import { VoiceType } from '../types/voice';
 import { convertToWav, applyVoiceEffect } from '@/components/features/VoiceTransformation';
+import { FFmpegProgressBar } from '@/components/ui/FFmpegProgressBar';
 
 export const VoiceChangerPage = () => {
   const [audioFile, setAudioFile] = useState<File | null>(null);
@@ -32,17 +33,17 @@ export const VoiceChangerPage = () => {
       setProcessingStep('Applying voice effects...');
       
       // TODO: Step 2 - Apply voice transformation
-      // const processedBlob = await applyVoiceEffect(wavBlob, selectedVoice);
+      const processedBlob = await applyVoiceEffect(wavBlob, selectedVoice);
       
       setProcessingStep('Finalizing...');
       
       // TODO: Step 3 - Create URL for playback
-      // const url = URL.createObjectURL(processedBlob);
-      // setProcessedAudioUrl(url);
+      const url = URL.createObjectURL(processedBlob);
+      setProcessedAudioUrl(url);
       
       // Placeholder: For now, just use the original file
-      const url = URL.createObjectURL(audioFile);
-      setProcessedAudioUrl(url);
+      // const url = URL.createObjectURL(audioFile);
+      // setProcessedAudioUrl(url);
       
     } catch (error) {
       console.error('Processing error:', error);
@@ -102,6 +103,7 @@ export const VoiceChangerPage = () => {
           </div>
         </main>
       </div>
+      <FFmpegProgressBar />
     </div>
   );
 };
