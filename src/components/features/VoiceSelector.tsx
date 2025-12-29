@@ -14,13 +14,13 @@ const voiceOptions: VoiceOption[] = [
   {
     type: 'robot',
     label: 'Robot',
-    description: 'Mechanical voice effect',
+    description: 'Mechanical voice effect (May take longer for larger files, so please wait)',
     icon: Bot,
   },
   {
     type: 'female',
     label: 'Female',
-    description: 'Feminine voice effect',
+    description: 'Feminine voice effect (May take longer for larger files, so please wait)',
     icon: Venus,
   },
   {
